@@ -3,9 +3,10 @@ class CreateLikes < ActiveRecord::Migration[7.0]
     create_table :likes do |t|
       t.integer :authorid
       t.integer :postid
-      t.timestamps
 
-      add_index :authorid, :postid
+      t.timestamps
     end
+    add_index :likes, :authorid
+    add_index :likes, :postid
   end
 end
