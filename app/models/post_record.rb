@@ -11,4 +11,9 @@ class Post < ApplicationRecord
     counter = Post.count('author_id')
     author.update(counter)
   end
+
+  def five_recent_comments
+    comments.order('created_at' :desc).limit(5)
+  end
+
 end
