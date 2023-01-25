@@ -9,8 +9,9 @@ class CreatePosts < ActiveRecord::Migration[7.0]
       t.timestamps
       add_reference :posts, :like, index: true, foreign_key: true
       add_reference :posts, :comment, index: true, foreign_key: true
+      add_reference :posts, :author, references: :users, null: false, foreign_key(to-table: :users)
     end
     add_index :posts, :authorid
-    add_reference :posts, :author, references: :users, null: false, foreign_key(to-table: :users)
+
   end
 end
