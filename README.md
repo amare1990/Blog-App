@@ -31,7 +31,7 @@
 
 
 
-`Creating a data model` is the first milestone of the `Blog App` intended for Microverse students to exercise on creating and running migrations to get the database schema. Setting up of RoR linters is another objective of this Rails project milestone.
+`Processing data in models` is the second milestone of the `Blog App` intended for Microverse students to exercise on creating models, and use `CRUD` methods on the models created.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -43,12 +43,6 @@
     <li><a href="https://www.ruby-lang.org/">PostgreSQL</a></li>
   </ul>
 </details>
-<details>
-  <summary>Client</summary>
-  <ul>
-    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
-  </ul>
-</details>
 
 <details>
 <summary>Database</summary>
@@ -57,12 +51,20 @@
   </ul>
 </details>
 
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://rubyonrails.org/">Ruby on Rails</a></li>
+  </ul>
+</details>
+
+
 ### Key Features <a name="key-features"></a>
 
 
-- **Setup RoR connection to the PostgreSQL**
-- **Add and configureRoR linters**
-- **Creating migrations to create model**
+- **Recreate the migration files to add the proper reference to each table**
+- **Setup foreign keys in the migration files**
+- **Setup `has_many` and `belongs_to` associations between tables**
 - **Running migrations to schema**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -93,7 +95,7 @@ Clone this repository to your desired folder:
 
 Install this project with:
 
-  cd my-project
+  cd `Blog-App`
   gem install rails
   Bundle Install
 
@@ -105,8 +107,7 @@ To run the project, execute the following command:
 
 
   - `rails server or rails s`
-  - Since the purpose of this milestone is to create models and scheme, you can see the files in the
-    `db` folder of your repositories if the files are created successfully.
+  - Since the purpose of this milestone is to exercise on creating models and apply `CRUD` methods on the model object, use the rails console using `rails c` command in your root directory of your project.
 
 
 
@@ -114,7 +115,7 @@ To run the project, execute the following command:
 
 
 
-## 👥 Authors <a name="authors"></a>
+## 👥 Author <a name="authors"></a>
 
 
 👤 **Amare Kassa**
@@ -127,9 +128,9 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Setup the project with proper Gitflow, and ror linters**
-- **Create migrations for each entity based on the ERD from the project requirement**
--  **Run the migration to create database schema**
+- **Modify the migration files to add the right references**
+- **Create models and add proper association between models**
+-  **Use `rails c` console to create models and apply `CRUD` methods**
 
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -152,16 +153,15 @@ Please ⭐️ this repository if you found the project useful.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank ruby on rails guide which is full of rich information and Microvers that provides the material that helps me to improve skills on RoRs.
+I would like to thank ruby on rails guide which is full of rich information and Microverse that provides the right material that helps me to improve skills on RoRs.
 
 
 
 
 ## ❓ FAQ <a name="faq"></a>
 
-> Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **Did you create the migration and schema from the classes in model folder?**
+- **Have you created a UI for the `CRUD` methods**
 
   - [No]
 
@@ -171,7 +171,7 @@ I would like to thank ruby on rails guide which is full of rich information and 
 
 ## 📝 License <a name="license"></a>
 
-This project is [MIT](https://github.com/amare1990/Blog-App/issues./.LICENSE) licensed.
+This project is [MIT](./LICENSE) licensed.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
