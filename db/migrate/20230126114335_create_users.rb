@@ -4,9 +4,9 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.text :name
       t.string :photo
       t.text :bio
-      t.integer :postscounter
+      t.integer :posts_counter
+
       t.timestamps
     end
-    add_index :users, :name
   end
 end
