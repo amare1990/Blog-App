@@ -5,14 +5,12 @@ class Post < ApplicationRecord
 
   after_save :update_posts_counter_for_user
 
-
   def update_posts_counter_for_user
     counter = Post.count('author_id')
     author.update(posts_counter: counter)
   end
 
   def five_recent_comments
-    comments.order('created_at': :desc).limit(5)
+    comments.order(created_at: :desc).limit(5)
   end
-
 end
