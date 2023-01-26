@@ -6,6 +6,7 @@ class CreateUsers < ActiveRecord::Migration[7.0]
       t.text :bio
       t.integer :posts_counter
 
+
       t.timestamps
     end
   end
