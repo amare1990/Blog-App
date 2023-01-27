@@ -17,6 +17,12 @@ RSpec.describe User, type: model do
       expect(author).to_not be_valid
     end
 
+    it "name attribute value should be exactly 'Amare' " do
+      author.name = nil
+
+      expect(author.name).to eq('Amare')
+    end
+
     it 'photo attribute value should be present' do
       author.photo = nil
       expect(author).to_not be_valid
