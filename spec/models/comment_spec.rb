@@ -1,23 +1,19 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  comment { Comment.new(text: "Hi man", author_id: 1, post_id: 1) }
+  subject { Comment.new(text: "Hi man", author_id: 1, post_id: 1) }
 
-  before { comment.save }
+  before { subject.save }
 
-  describe "Comment model validation" do
+  describe "Comment model validation: \n" do
 
-    t "Right now the comment model created should be valid" do
-      expect(comment).to be_valid
+    it "text value in the comment model should not be null" do
+      subject.text = nil
+      expect(subject).to_not be_valid
     end
 
-    t "text value in the comment model should not be null" do
-      comment.text = nil
-      expect(comment).to_not be_valid
-    end
-
-    t "text value in the comment model should be equal to 'Hi man' " do
-      expect(comment.text).to eq('Hi man')
+    it "text value in the comment model should be equal to 'Hi man' " do
+      expect(subject.text).to eq('Hi man')
     end
   end # end of inner describe model
 end
