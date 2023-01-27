@@ -1,9 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  comment {
-    Comment.new(text: "Hi man", author_id: 1, post_id: 1)
-  }
+  comment { Comment.new(text: "Hi man", author_id: 1, post_id: 1) }
 
   before { comment.save }
 
@@ -21,5 +19,5 @@ RSpec.describe Comment, type: :model do
     t "text value in the comment model should be equal to 'Hi man' " do
       expect(comment.text).to eq('Hi man')
     end
-  end # end of describe model
+  end # end of inner describe model
 end

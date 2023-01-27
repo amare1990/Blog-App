@@ -1,8 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  post { Post.new(title: 'Meeting Announcement', text: "The monthly meeting of Microver micronauts will be held on today"),
-author_id: 1 }
+  post { Post.new(title: 'Meeting Announcement', text: "The monthly meeting of Microver micronauts will be held on today"), author_id: 1 }
 
 
   before { post.save }
@@ -36,7 +35,7 @@ author_id: 1 }
       expect(post.five_recent_comments.count).to eq(5)
     end
 
-  end # end of describe block
+  end # end of inner describe block
 
 
 end
