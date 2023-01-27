@@ -7,7 +7,7 @@ RSpec.describe Post, type: :model do
 
   before { subject.save }
 
-  describe "Validation: \n" do
+  describe " model validation: \n" do
 
     it "The comments_counter should be a whole number" do
       subject.comments_counter = -10

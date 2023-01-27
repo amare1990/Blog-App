@@ -6,7 +6,7 @@ RSpec.describe Like, type: :model do
 
   before { subject.save }
 
-  describe "model validation: \n" do
+  describe " model validation: \n" do
 
     it "The author-id of the like model created right now should not be 50 " do
       expect(subject.author_id).to_not eq(50)

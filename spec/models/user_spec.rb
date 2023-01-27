@@ -5,7 +5,7 @@ RSpec.describe User, type: :model do
 
   before {subject.save}
 
-  describe "Validations: \n" do
+  describe " model validations: \n" do
 
     it 'name attribute value should be present' do
       subject.name = nil

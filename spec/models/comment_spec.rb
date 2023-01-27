@@ -5,7 +5,7 @@ RSpec.describe Comment, type: :model do
 
   before { subject.save }
 
-  describe "Comment model validation: \n" do
+  describe " model validation: \n" do
 
     it "text value in the comment model should not be null" do
       subject.text = nil
