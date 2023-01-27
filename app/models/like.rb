@@ -14,4 +14,3 @@ class Like < ApplicationRecord
     post.update(likes_counter: counter)
   end
 end
-

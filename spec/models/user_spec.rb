@@ -3,17 +3,15 @@ require 'rails_helper'
 RSpec.describe User, type: :model do
   subject { User.create(id: 1, name: 'Amare', photo: 'photo.png', bio: 'Microverse student') }
 
-  before {subject.save}
+  before { subject.save }
 
   describe " model validations: \n" do
-
     it 'name attribute value should be present' do
       subject.name = nil
       expect(subject).to_not be_valid
     end
 
     it "name attribute value should be exactly 'Amare' " do
-
       expect(subject.name) == 'Amare'
     end
 
@@ -45,7 +43,5 @@ RSpec.describe User, type: :model do
       Post.create(title: 'Job offer 5', text: 'Amare has got good job offer 5', author_id: subject.id)
       expect(subject.three_recent_posts.count) == 3
     end
-
-  end # end of inner descriobe block
-
+  end
 end
