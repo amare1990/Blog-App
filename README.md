@@ -31,8 +31,7 @@
 
 
 
-`Processing data in models` is the second milestone of the `Blog App` intended for Microverse students to exercise on creating models, and use `CRUD` methods on the models created.
-
+`Model validation` is the third milestone of the `Blog App` intended for Microverse students to exercise on implementing unit tests for each model class created using `RSpec`.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -62,10 +61,10 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **Recreate the migration files to add the proper reference to each table**
-- **Setup foreign keys in the migration files**
-- **Setup `has_many` and `belongs_to` associations between tables**
-- **Running migrations to schema**
+- **Setup the repo to include `rspec-rails` in gem and bundle install**
+- **Write unit tests for the validations of each model created**
+- **Write unit tests for the public internal methods in the model class**
+- **Exercise on writing unit tests descriptions intended for well decumentation of the application**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -79,7 +78,7 @@ To get a local copy up and running, follow these steps.
 
 In order to run this project you need:
 
-- `have installed ruby, git, npm`
+- `have installed ruby, git, npm, rails, gem`
 
 
 ### Setup
@@ -106,8 +105,8 @@ To run the project, execute the following command:
 
 
 
-  - `rails server or rails s`
-  - Since the purpose of this milestone is to exercise on creating models and apply `CRUD` methods on the model object, use the rails console using `rails c` command in your root directory of your project.
+  - Use the command `rspec` in the root directory of the repo.
+  - If you want to run the tests for each unit-test, use the command `rspec spec/models/modelclassname_spec.rb`, where  `modelclassname_spec.rb` is the name of the test unit.
 
 
 
@@ -128,9 +127,9 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Modify the migration files to add the right references**
-- **Create models and add proper association between models**
--  **Use `rails c` console to create models and apply `CRUD` methods**
+- **Create UI to insert data to the database**
+- **Add more unit tests for each model**
+- **Create logics to further process the model**
 
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -145,7 +144,7 @@ Feel free to check the [issues page](https://github.com/amare1990/Blog-App/issue
 ## ⭐️ Show your support <a name="support"></a>
 
 
-Please ⭐️ this repository if you found the project useful.
+Please ⭐️ this repository if you think the project is useful for you.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -164,6 +163,9 @@ I would like to thank ruby on rails guide which is full of rich information and 
 - **Have you created a UI for the `CRUD` methods**
 
   - [No]
+- **Is it possible to create schema just simply from the models without creating migration files**
+
+  - [We will check it if it works]
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
