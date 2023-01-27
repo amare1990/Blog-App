@@ -7,7 +7,6 @@ RSpec.describe User, type: :model do
 
   describe "Validations: \n" do
 
-
     it 'name attribute value should be present' do
       subject.name = nil
       expect(subject).to_not be_valid

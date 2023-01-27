@@ -9,8 +9,19 @@ RSpec.describe Post, type: :model do
 
   describe "Validation: \n" do
 
-    it "Right now the post model created should be valid" do
-      expect(subject).to be_valid
+    it "The comments_counter should be a whole number" do
+      subject.comments_counter = -10
+      expect(subject).to_not be_valid
+    end
+
+    it "Again the likes_counter should not be a negative integer" do
+      subject.comments_counter = -20
+      expect(subject).to_not be_valid
+    end
+
+    it "The title of the post shloul not be greater than 250 charactors" do
+      subject.title = Random.rand(1..100) * 251
+      expect(subject).to_not be_valid
     end
 
     it "Right now the number of comments for this post should be zero  " do
