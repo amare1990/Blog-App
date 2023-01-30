@@ -27,11 +27,11 @@
 - [📝 License](#license)
 
 
-# 📖Blog App<a name="about-project"></a>
+# 📖Blog App: Controllers<a name="about-project"></a>
 
 
 
-`Model validation` is the third milestone of the `Blog App` intended for Microverse students to exercise on implementing unit tests for each model class created using `RSpec`.
+`Controllers` is the fourth milestone of the `Blog App` intended for Microverse students to exercise on creating controllers, the corresponding route from which the controller decides the controller and the action, and the view files. In this exercise, `rails g scaffold` is not used and the controllers, routes and the view files are written from the scratch.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -61,10 +61,10 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **Setup the repo to include `rspec-rails` in gem and bundle install**
-- **Write unit tests for the validations of each model created**
-- **Write unit tests for the public internal methods in the model class**
-- **Exercise on writing unit tests descriptions intended for well decumentation of the application**
+- **Create `UsersController` controller**
+- **Create routes and view files for the `UsersController`**
+- **Create `PostsController` controller**
+- **Craete routes and view files for the `PostsController`**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -105,9 +105,7 @@ To run the project, execute the following command:
 
 
 
-  - Use the command `rspec` in the root directory of the repo.
-  - If you want to run the tests for each unit-test, use the command `rspec spec/models/modelclassname_spec.rb`, where  `modelclassname_spec.rb` is the name of the test unit.
-
+  - Start the rails server and append the corresponding `urls`.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -127,9 +125,9 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Create UI to insert data to the database**
-- **Add more unit tests for each model**
-- **Create logics to further process the model**
+- **Create users and posts table add more logic in the controller and check if the url works**
+- **Transfer context from the controller to the view file**
+- **Use the context to display parameters in the view file**
 
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -152,7 +150,7 @@ Please ⭐️ this repository if you think the project is useful for you.
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
 
-I would like to thank ruby on rails guide which is full of rich information and Microverse that provides the right material that helps me to improve skills on RoRs.
+I would like to thank ruby on rails guide which is full of rich information and again Microverse that provides the right material that helps me to improve skills on RoRs.
 
 
 
@@ -160,12 +158,11 @@ I would like to thank ruby on rails guide which is full of rich information and 
 ## ❓ FAQ <a name="faq"></a>
 
 
-- **Have you created a UI for the `CRUD` methods**
+- **Did you use `rails g scaffold UsersController/PostsController`?**
+  - No
+- **Did you modify any database data in the controller you created?**
 
-  - [No]
-- **Is it possible to create schema just simply from the models without creating migration files**
-
-  - [We will check it if it works]
+  - No
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
