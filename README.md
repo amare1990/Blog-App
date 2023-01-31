@@ -27,11 +27,11 @@
 - [📝 License](#license)
 
 
-# 📖Blog App: Controllers<a name="about-project"></a>
+# 📖Blog App: Controllers-specs<a name="about-project"></a>
 
 
 
-`Controllers` is the fourth milestone of the `Blog App` intended for Microverse students to exercise on creating controllers, the corresponding route from which the controller decides the controller and the action, and the view files. In this exercise, `rails g scaffold` is not used and the controllers, routes and the view files are written from the scratch.
+`Controllers-specs` is the fifth milestone of the `Blog App` intended for Microverse students to exercise on writing unit tests for each contoller created in the fourth milestone of this project using `rspec` test unit framework. in this milestone, each controller is tested if it can respond with `200 OK` response whenever the right route is given. Each controller is also tested if it renders the correct view template. In addtion, each controller is also tested if it returns the right placeholder text.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -57,14 +57,21 @@
   </ul>
 </details>
 
+<details>
+  <summary>Relish</summary>
+  <ul>
+    <li><a href="https://relishapp.com/rspec/">RSpec rspec-rails</a></li>
+  </ul>
+</details>
 
 ### Key Features <a name="key-features"></a>
 
 
-- **Create `UsersController` controller**
-- **Create routes and view files for the `UsersController`**
-- **Create `PostsController` controller**
-- **Craete routes and view files for the `PostsController`**
+- **Create unit tests for the UsersController(users_controller_spec.rb)**
+- **Create Unit tests for the PostsController(posts_controller_spec.rb)**
+- **Write unit tests if each controller responds `200 OK` response message whenever the route rote is given**
+- **Write unit tests for each controller to test if each controller renders the right template**
+- **Write unit tests for each controller if the correct placeholder text is returned**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -96,6 +103,7 @@ Install this project with:
 
   cd `Blog-App`
   gem install rails
+  Add `rspec-rails` bundle in `gem` module
   Bundle Install
 
 
@@ -103,9 +111,12 @@ Install this project with:
 
 To run the project, execute the following command:
 
-
-
   - Start the rails server and append the corresponding `urls`.
+
+### Test
+To test each unit tests of the project, execute the following command in yur root directory of this repo.
+  - `rspec spec/folder/unit_test_spec.rb,` e.g rspec spec/controllers/users_controller.rb
+  - `rspec` - to test all the test units at a time.
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -125,8 +136,7 @@ To run the project, execute the following command:
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Create users and posts table add more logic in the controller and check if the url works**
-- **Transfer context from the controller to the view file**
+- **Implement advanced actions and write unit tests for each advanced actions**
 - **Use the context to display parameters in the view file**
 
 
@@ -153,14 +163,12 @@ Please ⭐️ this repository if you think the project is useful for you.
 I would like to thank ruby on rails guide which is full of rich information and again Microverse that provides the right material that helps me to improve skills on RoRs.
 
 
-
-
 ## ❓ FAQ <a name="faq"></a>
 
 
-- **Did you use `rails g scaffold UsersController/PostsController`?**
+- **Did you write integration tests for this project?**
   - No
-- **Did you modify any database data in the controller you created?**
+- **Did you write performance tests for this project**
 
   - No
 
