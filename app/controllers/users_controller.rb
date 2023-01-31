@@ -3,7 +3,7 @@ class UsersController < ApplicationController
     render '/users/index'
   end
 
-  def user
+  def show
     render 'users/show'
   end
 end
