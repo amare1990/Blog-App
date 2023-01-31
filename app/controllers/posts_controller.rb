@@ -4,6 +4,6 @@ class PostsController < ApplicationController
   end
 
   def show
-    render '/posts/index'
+    render '/posts/show'
   end
 end
