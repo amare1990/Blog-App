@@ -26,13 +26,11 @@ RSpec.describe UsersController, type: :request do
       get users_path
       expect(response.body).not_to eq('ere is list of users and their corresponding number of posts')
     end
-
-  end # end of 'get /users/' describe block
+  end
 
   describe 'get /users/id' do
-
     it "\nshould respond success status message" do
-      get '/users/id/', params: {id: 1}
+      get '/users/id/', params: { id: 1 }
       expect(response).to have_http_status(:success)
     end
 
@@ -53,16 +51,14 @@ RSpec.describe UsersController, type: :request do
 
     it "\nshould respond the correct placeholder text" do
       get user_path(:id)
-      placeholder_text = "Here is an author with her/his corresponding bio and his/her posts"
+      placeholder_text = 'Here is an author with her/his corresponding bio and his/her posts'
       expect(response.body).to include(placeholder_text)
     end
 
     it "\nshould not respond a placeholder text other than the correct placeholder text" do
       get user_path(:id)
-      placeholder_text = "is an author with her/his corresponding bio and his/her posts"
+      placeholder_text = 'is an author with her/his corresponding bio and his/her posts'
       expect(response.body).not_to eq(placeholder_text)
     end
-
-  end # end of '/users/id' describe block
-
+  end
 end
