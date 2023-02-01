@@ -1,3 +1,33 @@
-<h1>
-<h1> Here is list of posts for an author with author_id = id
-</h1>
+<div class="posts-wrapper">
+  <h1> Here is list of posts for an author with author_id = id </h1>
+
+  <div class="posts-container"
+    <div class="author-info">
+      <img class="post-box" src = "<%= @user.photo %>" alt="<%%= @user.name>'s profile picture" >
+      <div class="user-link-wrapper">
+          <h2> <%= link_to @user.name, user_path(user) %> </h2>
+          <p> Number of posts: <%= @user.posts_counter %> </p>
+      </div>
+    </div>
+
+    <ul class="posts-list">
+      <% @user.posts.each do |post| %>
+        <li class="post-list">
+          <p class="post-title"> <%= link_to post.title, user_post_path(@user, post) %> </p>
+          <p class="post-text"> <%= post.text %> </p>
+          <p class="comments-likes-count">
+            Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+          </p>
+        </li>
+
+        <% post.five_recent_comments.each do |comment| %>
+          <li class="comments-list">
+            <p class="comment-text"> <%= comment.author.name%>: <%= comment.text %> </p>
+          </li>
+        <% end %>
+      <% end %>
+    </ul>
+
+  <div
+  <button class="btn btn-pagination"> Pagination </button>
+</div>
