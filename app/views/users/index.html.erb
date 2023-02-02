@@ -1,13 +1,13 @@
-<div class="users-index-wrapper"
-<h2>Here is list of users and their corresponding number of posts</h2>
+<div class="users-index-wrapper">
+<h1 class="header-text">Here is list of users and their corresponding number of posts</h1>
 
 <ul class="users-container">
   <% @users.each do |user| %>
-    <li class="user-link-container">
-      <img class="post-box" src ="<%= user.photo %>" alt="<%= user.name %>'s profile picture">
+    <li class="author-info user-link-container">
+      <img class="post-box" src ="/box-post.png" alt="Post logo">
       <div class="user-link-wrapper">
-        <h2> <%= link_to user.name, user_path(user) %> </h2>
-         <p> Number of posts: user.posts_counter</p>
+        <p class="username-link"> <%= link_to user.name, user_path(user) %> </p>
+        <p class="posts-counter"> Number of posts: <%= user.posts_counter %></p>
       </div>
     </li>
   <% end %>
