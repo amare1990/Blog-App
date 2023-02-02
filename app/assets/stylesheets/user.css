@@ -1,4 +1,4 @@
-*{
+* {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -37,7 +37,6 @@ body {
   height: 100px;
 }
 
-
 li {
   text-decoration: none;
   list-style: none;
@@ -49,7 +48,6 @@ li {
   color: black;
   font-size: 25px;
 }
-
 
 /* user#show starts here */
 .user-posts,
@@ -70,6 +68,7 @@ li {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+
   /* justify-content: space-between; */
   gap: 20px;
   border: 2px solid black;
@@ -96,7 +95,7 @@ li {
 }
 
 .btn-pagination {
-  margin:  15px auto;
+  margin: 15px auto;
 }
 
 .btn-all-posts a {
