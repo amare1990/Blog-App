@@ -31,7 +31,7 @@
 
 
 
-`Controllers-specs` is the fifth milestone of the `Blog App` intended for Microverse students to exercise on writing unit tests for each contoller created in the fourth milestone of this project using `rspec` test unit framework. in this milestone, each controller is tested if it can respond with `200 OK` response whenever the right route is given. Each controller is also tested if it renders the correct view template. In addtion, each controller is also tested if it returns the right placeholder text.
+`Views` is the six milestone of the `Blog App` project intended for Microverse students to exercise on using template tags and writing templates. `<%%>` and `<%= %>` are used to interpolate database data and write ruby codes in the template. Another major task in this project milestone is to add premilinary styles in rails application from the wireframe design..
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -67,11 +67,9 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **Create unit tests for the UsersController(users_controller_spec.rb)**
-- **Create Unit tests for the PostsController(posts_controller_spec.rb)**
-- **Write unit tests if each controller responds `200 OK` response message whenever the route rote is given**
-- **Write unit tests for each controller to test if each controller renders the right template**
-- **Write unit tests for each controller if the correct placeholder text is returned**
+- **Use `<%= %>` to display model data in the template**
+- **Use `<%%>` to embed ruby code in the template**
+- **Add premilinary styles for each template**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -136,8 +134,9 @@ To test each unit tests of the project, execute the following command in yur roo
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Implement advanced actions and write unit tests for each advanced actions**
-- **Use the context to display parameters in the view file**
+- **Add forms in the application to submit application data (user, post, and comment data)**
+- **Add login and registration forms**
+- **Handle `like` action**
 
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -166,11 +165,11 @@ I would like to thank ruby on rails guide which is full of rich information and 
 ## ❓ FAQ <a name="faq"></a>
 
 
-- **Did you write integration tests for this project?**
+- **Does this project milestone accept data via forms?**
   - No
-- **Did you write performance tests for this project**
+- **Do you see the right information in each template for data you inserted via `rails c`**
 
-  - No
+  - Yes
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

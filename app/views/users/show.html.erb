@@ -1,2 +1,31 @@
-<h1> Here is an author with her/his corresponding bio and his/her posts
-</h1>
+<div class="user-posts-wrapper">
+  <h1 class="header-text"> Here is an author with her/his corresponding bio and his/her posts </h1>
+  <div class="user-posts">
+    <div class="author-info user-link-container">
+        <img class="post-box" src ="/box-post.png" alt="<%= @user.name %>'s profile picture">
+        <div class="user-link-wrapper">
+          <p class="username-link"> <%= link_to @user.name, user_path(@user) %> </p>
+          <p class="posts-counter">  Number of posts: <%= @user.posts_counter %> </p>
+        </div>
+    </div>
+
+    <div class="bio-container">
+      <p class="bio-title"> Bio </p>
+      <p class="bio-text"> <%= @user.bio%> </p>
+    </div>
+
+      <% @user.three_recent_posts.each do |post| %>
+        <div class="post-container">
+          <p class="post-title"> <%= link_to post.title, user_post_path(@user, post) %> </p>
+          <p class="post-text"> <%= post.text %> </p>
+          <p class="comments-likes-count">
+            Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
+          </p>
+        </div>
+      <% end %>
+
+  <button class="btn btn-all-posts">
+    <%= link_to 'See all posts', user_posts_path(@user) %>
+  </button>
+  </div>
+</div>

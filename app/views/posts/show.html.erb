@@ -1,3 +1,32 @@
-<h1>
-This shows the details of a post with id = post_id and written by an author with id = author_id
-</h1>
+
+<div class="post-detail-wrapper">
+  <h1 class="header-text"> This shows the details of a post with id = <%= @post.id %>
+  and written by an author with id = <%= @post.author.id%>
+  </h1>
+
+  <div class="post-comment-container">
+   <div class="post-info-text">
+    <div class="post-header">
+      <p class="post-title"> <%= @post.title %> by <%= @post.author.name%> </p>
+      <p class="comments-likes-count">
+        Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %>
+      </p>
+    </div>
+
+    <div class="post-text-wrapper">
+      <p class="post-text"> <%= @post.text%> </p>
+    </div>
+   </div>
+
+   <ul class="comment-list">
+    <% @post.comments.each do |comment| %>
+      <li class="comment-item">
+       <%= comment.author.name  %>: <%= comment.text %>
+      </li>
+    <% end %>
+
+   </ul>
+
+
+  </div>
+</div>
