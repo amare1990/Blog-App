@@ -28,10 +28,10 @@
 
 
 # 📖Blog App: Controllers-specs<a name="about-project"></a>
+> `Blog APP` is a rails application which allows customers to create posts, add comments, likes the posts. It also allowers users to display whole blog post authors, posts for each author, comments for each post, the number of posts for each user, and the number of comments and likes for each post.
 
 
-
-`Views` is the six milestone of the `Blog App` project intended for Microverse students to exercise on using template tags and writing templates. `<%%>` and `<%= %>` are used to interpolate database data and write ruby codes in the template. Another major task in this project milestone is to add premilinary styles in rails application from the wireframe design..
+`Forms` is the seventh milestone of the `Blog App` project intended for Microverse students to exercise on creating forms using `forms-with` rails form helpers.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -67,9 +67,11 @@
 ### Key Features <a name="key-features"></a>
 
 
-- **Use `<%= %>` to display model data in the template**
-- **Use `<%%>` to embed ruby code in the template**
-- **Add premilinary styles for each template**
+- **Add routes for each form to be created**
+- **Add methods(new, create) for each form**
+- **Create form templates using `form_wth rails form helper**
+- **Create partials to be embedded in main templates**
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -109,10 +111,11 @@ Install this project with:
 
 To run the project, execute the following command:
 
-  - Start the rails server and append the corresponding `urls`.
+  - Run the command `rails server`
+  - Start the rails server and append the corresponding `urls pattern`.
 
 ### Test
-To test each unit tests of the project, execute the following command in yur root directory of this repo.
+To test each unit tests of the project, execute the following command in your root directory of this repo.
   - `rspec spec/folder/unit_test_spec.rb,` e.g rspec spec/controllers/users_controller.rb
   - `rspec` - to test all the test units at a time.
 
@@ -134,16 +137,17 @@ To test each unit tests of the project, execute the following command in yur roo
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Add forms in the application to submit application data (user, post, and comment data)**
-- **Add login and registration forms**
-- **Handle `like` action**
+- **Create authentication of users**
+- **Testing forms**
+- **Use JavaScript/react to add additional features**
+
 
 
 ## 🤝 Contributing <a name="contributing"></a>
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/amare1990/Blog-App/issues).
+> Feel free to check the [issues page](https://github.com/amare1990/Blog-App/issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -151,7 +155,7 @@ Feel free to check the [issues page](https://github.com/amare1990/Blog-App/issue
 ## ⭐️ Show your support <a name="support"></a>
 
 
-Please ⭐️ this repository if you think the project is useful for you.
+> Please ⭐️ this repository if you think the project is useful for you.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -166,10 +170,15 @@ I would like to thank ruby on rails guide which is full of rich information and 
 
 
 - **Does this project milestone accept data via forms?**
-  - No
+  - Yes
+
 - **Do you see the right information in each template for data you inserted via `rails c`**
 
   - Yes
+
+   **Did you additional fields other than the model field in the form**
+
+  - No
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
