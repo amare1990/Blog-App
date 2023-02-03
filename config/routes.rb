@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   post '/users/:user_id/posts/:id/likes', to: 'likes#create', as: 'like_create'
   get '/users/:user_id/posts/:id/likes/new', to: 'likes#new', as: 'like_new'
 
+  get '/uncompleted', to: "comments#under_construction"
+
   resources :users, only: [:index, :show]
 
   resources :posts, only: [:new, :create]
