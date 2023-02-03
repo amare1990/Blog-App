@@ -18,15 +18,25 @@
     </div>
    </div>
 
+   <%= render "shared/like" %>
+
    <ul class="comment-list">
     <% @post.comments.each do |comment| %>
       <li class="comment-item">
        <%= comment.author.name  %>: <%= comment.text %>
       </li>
     <% end %>
-
    </ul>
 
+   <div class="btn-group">
+     <button class="btn btn-create-comment">
+        <%= link_to "Comment here", comment_new_path %>
+     </button>
+
+    <button class="btn btn-all-comments">
+      <%= link_to 'See all comments', uncompleted_path %>
+    </button>
+   </div>
 
   </div>
 </div>

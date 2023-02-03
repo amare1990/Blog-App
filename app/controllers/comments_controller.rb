@@ -21,6 +21,9 @@ class CommentsController < ApplicationController
     end
   end
 
+  def under_construction
+  end
+
   private
 
   def comments_params
