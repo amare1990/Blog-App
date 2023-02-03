@@ -127,7 +127,7 @@ li {
 .btn-group {
   display: flex;
   justify-content: center;
-  align-items: c;
+  align-items: center;
   gap: 20px;
 }
 

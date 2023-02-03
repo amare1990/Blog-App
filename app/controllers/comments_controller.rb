@@ -5,9 +5,7 @@ class CommentsController < ApplicationController
     @comment.author = @current_user
     @user = User.find(params[:user_id])
     @post = Post.find(params[:id])
-    #render '/comments/new'
   end
-
 
   def create
     @comment = Comment.new(comments_params)
@@ -21,13 +19,11 @@ class CommentsController < ApplicationController
     end
   end
 
-  def under_construction
-  end
+  def under_construction; end
 
   private
 
   def comments_params
     params.require(:comment).permit(:text, :post_id)
   end
-
 end
