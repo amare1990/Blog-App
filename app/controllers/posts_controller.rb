@@ -3,7 +3,6 @@ class PostsController < ApplicationController
     @current_user = current_user
     @user = User.find(params[:user_id])
     @post = Post.where(author_id: params[:user_id])
-    @comments = Comment.all
     render '/posts/index'
   end
 
