@@ -1,6 +1,7 @@
 <div class="user-posts-wrapper">
   <h1 class="header-text"> Here is an author with her/his corresponding bio and his/her posts </h1>
   <div class="user-posts">
+
     <div class="author-info user-link-container">
         <img class="post-box" src ="/box-post.png" alt="<%= @user.name %>'s profile picture">
         <div class="user-link-wrapper">
@@ -16,7 +17,7 @@
 
       <% @user.three_recent_posts.each do |post| %>
         <div class="post-container">
-          <p class="post-title"> <%= link_to post.title, user_post_path(@user, post) %> </p>
+          <p class="post-title"> <%= link_to post.title, user_posts_path(@user, post) %> </p>
           <p class="post-text"> <%= post.text %> </p>
           <p class="comments-likes-count">
             Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
@@ -24,8 +25,15 @@
         </div>
       <% end %>
 
-  <button class="btn btn-all-posts">
-    <%= link_to 'See all posts', user_posts_path(@user) %>
-  </button>
+      <div class="btn-group">
+        <button class="btn btn-create-post">
+        <%= link_to "Create a new Post", new_post_path %>
+        </button>
+
+        <button class="btn btn-all-posts">
+          <%= link_to 'See all posts', user_posts_path(@user) %>
+        </button>
+      </div>
+
   </div>
 </div>

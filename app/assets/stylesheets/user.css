@@ -89,7 +89,7 @@ li {
   height: auto;
 }
 
-.btn-all-posts {
+.btn {
   margin-top: 15px;
   width: auto;
   height: auto;
@@ -100,7 +100,7 @@ li {
   margin: 15px auto;
 }
 
-.btn-all-posts a {
+.btn a {
   color: black;
 }
 
@@ -122,4 +122,15 @@ li {
 .comments-likes-count {
   align-self: flex-end;
   font-size: 12px;
+}
+
+.btn-group {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.btn-like {
+  margin: 5px 0 20px 0;
 }

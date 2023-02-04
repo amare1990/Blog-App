@@ -13,7 +13,7 @@
     <ul class="posts-list">
       <% @user.posts.each do |post| %>
         <li class="post-list-item">
-          <p class="post-title"> <%= link_to post.title, user_post_path(@user, post) %> </p>
+          <p class="post-title"> <%= link_to post.title, user_posts_path(@user, post) %> </p>
           <p class="post-text"> <%= post.text %> </p>
           <p class="comments-likes-count">
             Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>

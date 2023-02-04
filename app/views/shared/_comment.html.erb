@@ -1,0 +1,15 @@
+<h1 class="form-header form-header-comment-new"> Create new comment </h1>
+
+<%= form_with url: comment_create_path, model: Comment do |form| %>
+  <%= form.hidden_field :post_id, value: @post.id %>
+  <div class="form-wrapper">
+
+    <div class="fields-wrapper">
+      <%= form.label :text%>
+      <%= form.text_area :text%>
+  </div>
+
+  <%= form.submit 'Comment now', :class=>"btn btn-comment" %>
+
+  </div>
+<% end %>
