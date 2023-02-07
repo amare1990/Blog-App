@@ -14,6 +14,9 @@ RSpec.describe 'users#index route Page testing', type: :feature do
       end
     end
 
+    it 'shows profile pic' do
+      expect(page).to have_css("img[src='my-phto']")
+    end
 
     it 'should display the number of posts of each user' do
       User.all.each do |user|
