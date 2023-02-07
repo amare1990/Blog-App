@@ -14,6 +14,10 @@ RSpec.describe 'Single User Page', type: :feature do
       expect(page).to have_content(@user.name)
     end
 
+    it "\nshould not have other name" do
+      expect(page).not_to have_content('Pepe')
+    end
+
     it "\nshould have username link" do
       expect(page).to have_link(@user.name, href: user_path(id: @user.id))
     end
