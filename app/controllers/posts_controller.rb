@@ -24,10 +24,10 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
     if @post.save
-      flash.now[:notice] = "Successfully posted"
+      flash.now[:notice] = 'Successfully posted'
       redirect_to user_path(@current_user)
     else
-      flash.now[:error] = "Error in posting"
+      flash.now[:error] = 'Error in posting'
       render :new
     end
   end
