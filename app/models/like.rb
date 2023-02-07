@@ -10,7 +10,8 @@ class Like < ApplicationRecord
   private
 
   def update_likes_counter
-    counter = Like.count(:post_id)
-    post.update(likes_counter: counter)
+    # counter = Like.count(:post_id)
+    # post.update(likes_counter: counter)
+    post.update(likes_counter: post.likes.count)
   end
 end
