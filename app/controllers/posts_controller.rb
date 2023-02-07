@@ -3,9 +3,11 @@ class PostsController < ApplicationController
     @current_user = current_user
     @user = User.find(params[:user_id])
     # @post = Post.where(author_id: params[:user_id])
+    @post = @user.posts
+
 
     # @user = User.includes(:posts, posts: [:comments, { comments: [:author] }]).find(params[:user_id])
-    @posts = Post.where(author_id: params[:user_id]).includes(@user, :comments)
+    # @posts = Post.where(author_id: params[:user_id]).includes(:user)
     render '/posts/index'
   end
 
