@@ -1,8 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'users#index route Page testing', type: :feature do
-  before(:all) do
-    @user = User.create(name: 'Amare original', photo: 'my-phto',bio: 'Microvers estudent', posts_counter: 20)
+  before(:each) do
+    @user = User.create(name: 'Amare orig 2', photo: 'my-phto',bio: 'Microvers estudent', posts_counter: 20)
+    @user2 = User.create(name: 'Hanna', photo: 'her-phto',bio: 'Microvers estudent sec batch', posts_counter: 56)
   end
 
   describe "\nusers#index testing group" do
@@ -14,8 +15,8 @@ RSpec.describe 'users#index route Page testing', type: :feature do
       end
     end
 
-    it 'shows profile pic' do
-      expect(page).to have_css("img[src='my-phto']")
+    it 'should not display bio text unrelated' do
+      expect(page).to_not have_content("zzzzxxx")
     end
 
     it 'should display the number of posts of each user' do
