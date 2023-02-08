@@ -21,7 +21,7 @@ RSpec.describe Post, type: :model do
     end
 
     it 'The title of the post shloul not be greater than 250 charactors' do
-      subject.title = "A" * 256
+      subject.title = 'A' * 256
       expect(subject).not_to be_valid
     end
 
