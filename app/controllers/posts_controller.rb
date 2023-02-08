@@ -18,7 +18,6 @@ class PostsController < ApplicationController
     # @current_user = current_user
     # @comments = Comment.all
     # render '/posts/show'
-
   end
 
   def new
