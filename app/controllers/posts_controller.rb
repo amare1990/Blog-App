@@ -14,11 +14,11 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
     @user = User.find(params[:user_id])
     # @current_user = current_user
     # @comments = Comment.all
     # render '/posts/show'
+
   end
 
   def new
@@ -32,8 +32,10 @@ class PostsController < ApplicationController
     @post.comments_counter = 0
     @post.likes_counter = 0
     if @post.save
+      flash.now[:notice] = 'Successfully posted'
       redirect_to user_path(@current_user)
     else
+      flash.now[:error] = 'Error in posting'
       render :new
     end
   end
