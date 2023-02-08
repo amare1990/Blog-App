@@ -15,6 +15,7 @@ class PostsController < ApplicationController
 
   def show
     @user = User.find(params[:user_id])
+    @post = Post.find(params[:user_id])
     # @current_user = current_user
     # @comments = Comment.all
     # render '/posts/show'
