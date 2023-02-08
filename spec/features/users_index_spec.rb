@@ -2,8 +2,8 @@ require 'rails_helper'
 
 RSpec.describe 'users#index route Page testing', type: :feature do
   before(:each) do
-    @user = User.create(name: 'Amare orig 2', photo: 'my-phto',bio: 'Microvers estudent', posts_counter: 20)
-    @user2 = User.create(name: 'Hanna', photo: 'her-phto',bio: 'Microvers estudent sec batch', posts_counter: 56)
+    @user = User.create(name: 'Amare orig 2', photo: 'my-phto', bio: 'Microvers estudent', posts_counter: 20)
+    @user2 = User.create(name: 'Hanna', photo: 'her-phto', bio: 'Microvers estudent sec batch', posts_counter: 56)
   end
 
   describe "\nusers#index testing group" do
@@ -16,7 +16,7 @@ RSpec.describe 'users#index route Page testing', type: :feature do
     end
 
     it 'should not display bio text unrelated' do
-      expect(page).to_not have_content("zzzzxxx")
+      expect(page).to_not have_content('zzzzxxx')
     end
 
     it 'should display the number of posts of each user' do

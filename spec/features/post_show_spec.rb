@@ -4,17 +4,18 @@ RSpec.describe 'post#how', type: :feature do
     @user = User.create(name: 'Amare', photo: 'My-photo', bio: 'Software Engineer')
 
     @user2 = User.create(name: 'Solomon', bio: 'Elec Engineer',
-    photo: 'sol-pic')
+                         photo: 'sol-pic')
 
     @post = Post.create(
       title: 'Blog App dev',
       text: 'Class association in detail there',
-      author_id: @user.id )
+      author_id: @user.id
+    )
 
     Comment.create(text: 'Blog in rails is challenging', author_id: @user2.id, post_id: @post.id)
-    Comment.create(text: 'Yet you will adapt to it Sol', author_id: @user.id, post_id: @post.id )
-    Comment.create( text: 'Thanks', author_id: @user2.id, post_id: @post.id)
-    Like.create( post_id: @post.id, author_id: @user2.id)
+    Comment.create(text: 'Yet you will adapt to it Sol', author_id: @user.id, post_id: @post.id)
+    Comment.create(text: 'Thanks', author_id: @user2.id, post_id: @post.id)
+    Like.create(post_id: @post.id, author_id: @user2.id)
   end
 
   describe 'post#show test group' do
@@ -57,6 +58,5 @@ RSpec.describe 'post#how', type: :feature do
       visit user_posts_path(@user, @post.id)
       expect(page).to_not have_content('Hello')
     end
-
   end
 end
