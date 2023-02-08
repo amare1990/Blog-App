@@ -3,7 +3,7 @@
 
   <div class="posts-container">
     <div class="author-info user-link-container">
-      <img class="post-box" src = "/box-post.png" alt="Post logo" >
+      <%= image_tag("/images/#{@user.photo}", :class => 'post-box')%>
       <div class="user-link-wrapper">
       <p class="post-link"> <%= link_to @user.name, user_path(@user) %> </p>
           <p class="posts-counter"> Number of posts: <%= @user.posts_counter %> </p>
@@ -13,7 +13,7 @@
     <ul class="posts-list">
       <% @user.posts.each do |post| %>
         <li class="post-list-item">
-          <p class="post-title"> <%= link_to post.title, user_posts_path(@user, post) %> </p>
+          <p class="post-title"> <%= link_to post.title, post_show_path(@user, post) %> </p>
           <p class="post-text"> <%= post.text %> </p>
           <p class="comments-likes-count">
             Comments: <%= post.comments_counter %>, Likes: <%= post.likes_counter %>
@@ -21,7 +21,7 @@
         </li>
 
        <div class="comments-container">
-        <% post.five_recent_comments.each do |comment| %>
+        <% post.five_recent_comments.includes(:author).each do |comment| %>
           <li class="comments-list">
             <p class="comment-text"> <%= comment.author.name%>: <%= comment.text %> </p>
           </li>

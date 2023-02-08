@@ -8,7 +8,7 @@ RSpec.describe Comment, type: :model do
   describe " model validation: \n" do
     it 'text value in the comment model should not be null' do
       subject.text = nil
-      expect(subject).to_not be_valid
+      expect(subject).not_to be_valid
     end
 
     it "text value in the comment model should be equal to 'Hi man' " do

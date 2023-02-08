@@ -19,7 +19,5 @@ class Post < ApplicationRecord
 
   def update_posts_counter_for_user
     author.update(posts_counter: author.posts.count)
-    # counter = Post.count('author_id')
-    # author.update(posts_counter: counter)
   end
 end

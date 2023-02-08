@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe Post, type: :model do
   subject do
-    Post.create(id: 1, title: 'Meeting Announcement',
+    Post.create(title: 'Meeting Announcement',
                 text: 'The monthly meeting of Microver micronauts will be held on today morning',
                 author_id: 1)
   end
@@ -21,8 +21,8 @@ RSpec.describe Post, type: :model do
     end
 
     it 'The title of the post shloul not be greater than 250 charactors' do
-      subject.title = Random.rand(1..100) * 251
-      expect(subject).to_not be_valid
+      subject.title = 'A' * 256
+      expect(subject).not_to be_valid
     end
 
     it 'Right now the number of comments for this post should be zero  ' do

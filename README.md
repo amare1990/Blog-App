@@ -28,10 +28,10 @@
 
 
 # 📖Blog App: Controllers-specs<a name="about-project"></a>
-> `Blog APP` is a rails application which allows customers to create posts, add comments, likes the posts. It also allowers users to display whole blog post authors, posts for each author, comments for each post, the number of posts for each user, and the number of comments and likes for each post.
+> `Blog APP` is a rails application which allows customers to create posts, add comments, likes the posts. It also allowers users to display whole blog post authors, posts for each author, comments for each post, the number of posts for each user, and the number of comments and likes for each post. In this project, unit tests for each component using `rspec-rails` and integration tests for each view is also implemented.
 
 
-`Forms` is the seventh milestone of the `Blog App` project intended for Microverse students to exercise on creating forms using `forms-with` rails form helpers.
+`Integration specs for views and fix n+1 problems` is the eighth milestone of the `Blog App` project intended for Microverse students to exercise on two features: solving `n+1` query problems and addd integration tests for each view in the project.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -66,11 +66,11 @@
 
 ### Key Features <a name="key-features"></a>
 
-
-- **Add routes for each form to be created**
 - **Add methods(new, create) for each form**
 - **Create form templates using `form_wth rails form helper**
 - **Create partials to be embedded in main templates**
+- **Optimize databse table queries(applied in `posts#index` template)**
+- **Write integration tests for each view in the project**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -124,7 +124,7 @@ To test each unit tests of the project, execute the following command in your ro
 
 
 
-## 👥 Author <a name="authors"></a>
+## 👥 Authors <a name="authors"></a>
 
 
 👤 **Amare Kassa**
@@ -133,13 +133,18 @@ To test each unit tests of the project, execute the following command in your ro
 - Twitter: [@twitterhandle](https://twitter.com/amaremek)
 - LinkedIn: [@linkedInhandle](https://www.linkedin.com/in/amaremek/)
 
+👤 **Gabriel Andrade**
+
+- GitHub: [@gandradep](https://github.com/gandradep)
+- Twitter: [@leribagandrade](https://twitter.com/leribagandrade)
+- LinkedIn: [Gabriel-Andrade](https://www.linkedin.com/in/gabriel-andrade-silla-turca/)
 
 ## 🔭 Future Features <a name="future-features"></a>
 
 
 - **Create authentication of users**
-- **Testing forms**
-- **Use JavaScript/react to add additional features**
+- **Exercise on writing optimizing database table queries**
+- **Add icons for comments, likes, and stickers**
 
 
 
@@ -179,6 +184,11 @@ I would like to thank ruby on rails guide which is full of rich information and 
    **Did you additional fields other than the model field in the form**
 
   - No
+
+   **Does the optimized query improve the preformance of the query speed?**
+
+  - Yes
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
