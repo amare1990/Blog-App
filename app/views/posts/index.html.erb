@@ -3,7 +3,7 @@
 
   <div class="posts-container">
     <div class="author-info user-link-container">
-      <img class="post-box" src = "/box-post.png" alt="Post logo" >
+      <%= image_tag("/images/#{@user.photo}", :class => 'post-box')%>
       <div class="user-link-wrapper">
       <p class="post-link"> <%= link_to @user.name, user_path(@user) %> </p>
           <p class="posts-counter"> Number of posts: <%= @user.posts_counter %> </p>
