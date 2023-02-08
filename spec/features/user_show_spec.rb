@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Single User Page', type: :feature do
   before(:each) do
-    @user = User.create(name: 'Amare', photo: 'my-photo', bio: 'Microverse student', posts_counter: 20)
+    @user = User.create(name: 'Amare', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Microverse student', posts_counter: 20)
     @post = Post.create(title: 'rails Integ testing', text: 'This is my first integration testing',
                         comments_counter: 100, likes_counter: 10_000, author: @user)
     @post2 = Post.create(title: 'Backednd devt', text: 'Rails seems challenging',
@@ -15,6 +15,10 @@ RSpec.describe 'Single User Page', type: :feature do
 
   describe 'user#show page' do
     before(:each) { visit user_path(@user) }
+
+    it "\n should display user's profile picture" do
+      expect(page).to have_css('img[src*="https://unsplash.com/photos/F_-0BxGuVvo"]')
+    end
 
     it "\nshould display the user's username" do
       expect(page).to have_content(@user.name)

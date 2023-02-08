@@ -2,8 +2,10 @@ require 'rails_helper'
 
 RSpec.describe 'users#index route Page testing', type: :feature do
   before(:each) do
-    @user = User.create(name: 'Amare orig 2', photo: 'my-phto', bio: 'Microvers estudent', posts_counter: 20)
-    @user2 = User.create(name: 'Hanna', photo: 'her-phto', bio: 'Microvers estudent sec batch', posts_counter: 56)
+    @user = User.create(name: 'Amare orig 2', photo: "https://unsplash.com/photos/F_-0BxGuVvo",
+    bio: 'Microvers estudent', posts_counter: 20)
+    @user2 = User.create(name: 'Hanna', photo: "https://unsplash.com/photos/F_-0BxGuVvo",
+    bio: 'Microvers estudent sec batch', posts_counter: 56)
   end
 
   describe "\nusers#index testing group" do
@@ -13,6 +15,10 @@ RSpec.describe 'users#index route Page testing', type: :feature do
       User.all.each do |user|
         expect(page).to have_content(user.name)
       end
+    end
+
+    it "\n should display user's profile picture" do
+      expect(page).to have_css('img[src*="https://unsplash.com/photos/F_-0BxGuVvo"]')
     end
 
     it 'should not display bio text unrelated' do
