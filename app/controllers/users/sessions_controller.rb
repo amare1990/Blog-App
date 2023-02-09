@@ -8,6 +8,10 @@ class Users::SessionsController < Devise::SessionsController
   #   super
   # end
 
+  def create
+    # custom sign-in code
+  end
+
   # POST /resource/sign_in
   # def create
   #   super
