@@ -1,10 +1,8 @@
 class UsersController < ApplicationController
-
   # before_action :authenticate_user!
   # protect_from_forgery unless: -> { request.format.json? }
 
   # skip_before_action :verify_authenticity_token, only: [:create]
-
 
   def index
     @users = User.all

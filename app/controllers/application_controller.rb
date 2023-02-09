@@ -5,7 +5,6 @@ class ApplicationController < ActionController::Base
 
   protected
 
-
   def configure_permitted_parameters
     devise_parameter_sanitizer.permit(:sign_up, keys: %i[name email password password_confirmation])
     # params.require(:user).permit(:username, :email, :password, :password_confirmation)
@@ -18,8 +17,4 @@ class ApplicationController < ActionController::Base
   #     super # Use the default one
   #   end
   # end
-
 end
-
-
-
