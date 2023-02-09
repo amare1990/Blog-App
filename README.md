@@ -31,7 +31,7 @@
 > `Blog APP` is a rails application which allows customers to create posts, add comments, likes the posts. It also allowers users to display whole blog post authors, posts for each author, comments for each post, the number of posts for each user, and the number of comments and likes for each post. In this project, unit tests for each component using `rspec-rails` and integration tests for each view is also implemented.
 
 
-`Integration specs for views and fix n+1 problems` is the eighth milestone of the `Blog App` project intended for Microverse students to exercise on two features: solving `n+1` query problems and addd integration tests for each view in the project.
+`Authentication using devise` is the ninth milestone of the `Blog App` project intended for Microverse students to exercise on creating authetication using devise gem.
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
@@ -71,6 +71,10 @@
 - **Create partials to be embedded in main templates**
 - **Optimize databse table queries(applied in `posts#index` template)**
 - **Write integration tests for each view in the project**
+- **Can register a user**
+- **Asks fo confirmation of an email**
+- **A user can reset a password**
+- **Login fields changed to be username and password**
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -142,10 +146,8 @@ To test each unit tests of the project, execute the following command in your ro
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- **Create authentication of users**
-- **Exercise on writing optimizing database table queries**
-- **Add icons for comments, likes, and stickers**
-
+- **Authorizing logged in users**
+- **Creating API for the application**
 
 
 ## 🤝 Contributing <a name="contributing"></a>
@@ -188,6 +190,10 @@ I would like to thank ruby on rails guide which is full of rich information and 
    **Does the optimized query improve the preformance of the query speed?**
 
   - Yes
+
+  **did you implement the authentication from the scratch**
+
+  - No
 
 
 
