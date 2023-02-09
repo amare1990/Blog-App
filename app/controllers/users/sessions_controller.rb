@@ -1,5 +1,3 @@
-# frozen_string_literal: true
-
 class Users::SessionsController < Devise::SessionsController
   # before_action :configure_sign_in_params, only: [:create]
 
@@ -7,11 +5,6 @@ class Users::SessionsController < Devise::SessionsController
   # def new
   #   super
   # end
-
-  def create
-    # custom sign-in code
-    super
-  end
 
   # POST /resource/sign_in
   # def create
